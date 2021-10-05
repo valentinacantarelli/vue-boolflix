@@ -2,7 +2,7 @@
   <div id="app">
     <Header @search="searchMovie"/>
     <main>
-      <Films :research="elm"/>
+      <Films :research="elm" />
     </main>
   </div>
 </template>
@@ -10,6 +10,7 @@
 <script>
 import Header from './components/Header.vue'
 import Films from './components/Films.vue'
+
 
 export default {
   name: 'App',
@@ -19,7 +20,8 @@ export default {
   },
   data(){
     return{
-      searchText:""
+      searchText:"",
+      
     }
     
   },
@@ -28,9 +30,9 @@ export default {
       this.searchText = txt;
     }
   }
-}
+  }
 </script>
 
 <style lang="scss">
-
+@import "./assets/style/common";
 </style>
