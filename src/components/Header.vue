@@ -31,6 +31,12 @@ header{
   h2{
     color:#de0913;
   }
+  input{
+    margin:0 10px;
+    &:focus{
+      outline: none;
+    }
+  }
 
 }
 </style>

@@ -3,7 +3,7 @@
     <div class="rowMovie">
       <ul>
         <li v-for="(film,index)in research" :key="index" >
-          <Card :film="research"/>  
+          <Card :film="film"/>  
         </li>
       </ul>
       
