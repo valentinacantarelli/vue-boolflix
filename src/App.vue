@@ -21,6 +21,7 @@ export default {
   data(){
     return{
       films:[],
+      serie:[],
     }
   },
   methods:{
@@ -35,6 +36,19 @@ export default {
         .then((res)=>{
           this.films=res.data.results;
         });
+    },
+    searchSerie(query){
+      axios.get('https://api.themoviedb.org/3/search/tv',{
+          params:{
+            api_key:'d32280abe309c24e5fa47ceb776eeba7',
+            query: query,
+            language:'it-IT'
+          }
+        })
+        .then((res)=>{
+          this.serie=res.data.results;
+        });
+
     }
   }
 }
