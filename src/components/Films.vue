@@ -1,18 +1,25 @@
 <template>
   <div class="containerMovie">
-    <div class="rowMovie">
-      <ul>
-        <li v-for="(film,index) in research" :key="index" >
-          <Card :film="film"/>  
-        </li>
-      </ul>
+    <div class="rowMovie" v-if="research.length>0">
+      <div class="title"><h2>Ecco i film consigliati per te</h2></div>
+      <div class="sezione">
+        <ul>
+          <li v-for="(film,index) in research" :key="index" >
+            <Card :film="film"/>  
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="rowSerie">
-      <ul>
-        <li v-for="(film,index) in serie" :key="index" >
-          <Card :film="film"/>  
-        </li>
+    <div class="rowSerie" v-if="serieTv.length>0">
+      <div class="title"><h2>Ecco le serie consigliate per te</h2></div>
+      <div class="sezione">
+        <ul>
+          <li v-for="(film,index) in serieTv" :key="index" >
+            <Card :film="film"/>  
+          </li>
       </ul>
+      </div>
+      
       
     </div>
   </div>
@@ -26,7 +33,7 @@ export default {
     components:{
       Card
     },
-    props:["research","serie"],
+    props:["research","serieTv"],
     data(){
       return{
         searchFilm:""
@@ -44,19 +51,26 @@ export default {
 .containerMovie{
   background-color: rgb(17, 16, 16);
   color:white;
+  height:100%;
+  padding-top:70px;
   
-  .rowMovie{
-    display:flex;
+  .rowMovie, .rowSerie{
     width:90%;
     margin:auto;
     padding-top:20px;
-    ul{
+    
+    .sezione{
+      display:flex;
+
+      ul{
       display:flex;
       flex-wrap:wrap;
       li{
         margin:20px;
       }
     }
+    }
+    
   }
 }
 </style>

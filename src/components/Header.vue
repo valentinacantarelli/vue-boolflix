@@ -27,7 +27,8 @@ header{
   width: 100%;
   justify-content: space-between;
   padding:15px 30px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.603);
+  position:fixed;
 
   h2{
     color:$mainColor;

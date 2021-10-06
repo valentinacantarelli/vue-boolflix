@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header @search="searchMovie"/>
+    <Header @search="searchContent"/>
     <main>
-      <Films :research="films" :serie="serie" />
+      <Films :research="films" :serieTv="series" />
     </main>
   </div>
 </template>
@@ -21,10 +21,14 @@ export default {
   data(){
     return{
       films:[],
-      serie:[],
+      series:[],
     }
   },
   methods:{
+    searchContent(query){
+      this.searchMovie(query);
+      this.searchSerie(query)
+    },
     searchMovie(query){
       axios.get('https://api.themoviedb.org/3/search/movie',{
           params:{
@@ -46,7 +50,7 @@ export default {
           }
         })
         .then((res)=>{
-          this.serie=res.data.results;
+          this.series=res.data.results;
         });
 
     }
