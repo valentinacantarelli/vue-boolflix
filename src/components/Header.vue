@@ -3,7 +3,7 @@
     <h2>BOOLFLIX</h2>
     <div>
       <input type="text" placeholder="cosa vuoi guardare oggi?" v-model="inputText">
-      <button @click="$emit('search', inputText)">Cerca</button>
+      <button @click="$emit('search', inputText)" class="btn">Cerca</button>
     </div>
   </header>
   
@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scope>
+@import '../assets/style/variables';
 header{
   display: flex;
   width: 100%;
@@ -29,13 +30,23 @@ header{
   background-color: black;
 
   h2{
-    color:#de0913;
+    color:$mainColor;
   }
   input{
-    margin:0 10px;
+    margin:0 12px;
+    border-radius: 5px;
+    padding:4px 13px;
+    background-color: rgba(128, 128, 128, 0.315);
+    border: none;
+    color:white;
     &:focus{
       outline: none;
     }
+  }
+  button{
+    background-color: rgba(128, 128, 128, 0.432);
+    color:white;
+    
   }
 
 }

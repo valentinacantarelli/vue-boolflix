@@ -2,7 +2,7 @@
   <div id="app">
     <Header @search="searchMovie"/>
     <main>
-      <Films :research="inputText" />
+      <Films :research="films" />
     </main>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
           }
         })
         .then((res)=>{
-          this.films=res.data.response;
+          this.films=res.data.results;
         });
     }
   }
