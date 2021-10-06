@@ -2,7 +2,7 @@
   <div id="app">
     <Header @search="searchMovie"/>
     <main>
-      <Films :research="films" />
+      <Films :research="films" :serie="serie" />
     </main>
   </div>
 </template>

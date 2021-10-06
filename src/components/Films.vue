@@ -6,6 +6,13 @@
           <Card :film="film"/>  
         </li>
       </ul>
+    </div>
+    <div class="rowSerie">
+      <ul>
+        <li v-for="(film,index) in serie" :key="index" >
+          <Card :film="film"/>  
+        </li>
+      </ul>
       
     </div>
   </div>
@@ -19,7 +26,7 @@ export default {
     components:{
       Card
     },
-    props:["research"],
+    props:["research","serie"],
     data(){
       return{
         searchFilm:""
@@ -34,4 +41,22 @@ export default {
 <style lang="scss" scope>
 @import '../assets/style/variables';
 
+.containerMovie{
+  background-color: rgb(17, 16, 16);
+  color:white;
+  
+  .rowMovie{
+    display:flex;
+    width:90%;
+    margin:auto;
+    padding-top:20px;
+    ul{
+      display:flex;
+      flex-wrap:wrap;
+      li{
+        margin:20px;
+      }
+    }
+  }
+}
 </style>

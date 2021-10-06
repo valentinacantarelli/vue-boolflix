@@ -46,6 +46,7 @@ header{
   button{
     background-color: $secondaryColor;
     color:white;
+    cursor: pointer;
     
   }
 
