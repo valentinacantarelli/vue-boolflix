@@ -26,7 +26,7 @@ header{
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding:10px 20px;
+  padding:15px 30px;
   background-color: black;
 
   h2{
@@ -36,7 +36,7 @@ header{
     margin:0 12px;
     border-radius: 5px;
     padding:4px 13px;
-    background-color: rgba(128, 128, 128, 0.315);
+    background-color: $secondaryColor;
     border: none;
     color:white;
     &:focus{
@@ -44,7 +44,7 @@ header{
     }
   }
   button{
-    background-color: rgba(128, 128, 128, 0.432);
+    background-color: $secondaryColor;
     color:white;
     
   }
