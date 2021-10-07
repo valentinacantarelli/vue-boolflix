@@ -55,6 +55,7 @@ export default {
       left:0;
       padding:30px 10px;
       opacity:0;
+      transition: 0.3s;
 
       &:hover  {
         background-color: rgba(29, 29, 29, 0.863);
