@@ -29,6 +29,7 @@ header{
   padding:15px 30px;
   background-color: rgba(0, 0, 0, 0.603);
   position:fixed;
+  z-index: 1;
 
   h2{
     color:$mainColor;

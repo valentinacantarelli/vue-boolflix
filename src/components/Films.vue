@@ -61,12 +61,12 @@ export default {
     
     .sezione{
       display:flex;
-
+      justify-items: space-between;
       ul{
       display:flex;
       flex-wrap:wrap;
       li{
-        margin:20px;
+        margin:20px  ;
       }
     }
     }
