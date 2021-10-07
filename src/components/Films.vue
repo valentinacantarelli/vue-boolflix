@@ -67,7 +67,7 @@ export default {
       display:flex;
       flex-wrap:wrap;
       li{
-        margin:20px 14px ;
+        margin:20px 18px ;
       }
      }
     }

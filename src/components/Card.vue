@@ -1,6 +1,5 @@
 <template>
   <div class="card"  :style="{ backgroundImage: 'url(https://image.tmdb.org/t/p/w300'+film.poster_path+')'}" >
-    <!-- <div  class="card"  :style="{ backgroundImage: 'url(https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80)'}" > -->
       <div class="infoFilm">
         <h3>{{film.title || film.name}}</h3>
         <h4>{{film.original_title || film.original_name}}</h4>
@@ -37,15 +36,16 @@ export default {
 <style lang="scss" scope>
 @import '../assets/style/variables';
   .card{
-    width:210px;
-    height:270px;
+    width:200px;
+    height:290px;
     background-color:$secondaryColor;
     text-align: center;
     border-radius:3px;
     display:flex;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     position:relative;
+    background-repeat: no-repeat;
     
     .infoFilm{
       position:absolute;
@@ -53,12 +53,13 @@ export default {
       width:100%;
       top:0;
       left:0;
-      padding:22px 6px;
+      padding:30px 10px;
       opacity:0;
 
       &:hover  {
         background-color: rgba(29, 29, 29, 0.863);
         opacity: 1;
+        cursor: pointer;
       }
     }
     h3{
