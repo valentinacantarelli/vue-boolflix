@@ -33,11 +33,14 @@ header{
 
   h2{
     color:$mainColor;
+    font-size: 25px;
+    padding: 0 10px;
+    box-shadow: 2px 2px 2px red;
   }
   input{
     margin:0 12px;
     border-radius: 5px;
-    padding:4px 13px;
+    padding:4px 16px;
     background-color: $secondaryColor;
     border: none;
     color:white;

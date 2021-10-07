@@ -1,7 +1,7 @@
 <template>
   <div class="containerMovie">
+    <div class="title"><h2>Ecco i film consigliati per te</h2></div>
     <div class="rowMovie" v-if="research.length>0">
-      <div class="title"><h2>Ecco i film consigliati per te</h2></div>
       <div class="sezione">
         <ul>
           <li v-for="(film,index) in research" :key="index" >
@@ -10,8 +10,8 @@
         </ul>
       </div>
     </div>
+    <div class="title"><h2>Ecco le serie consigliate per te</h2></div>
     <div class="rowSerie" v-if="serieTv.length>0">
-      <div class="title"><h2>Ecco le serie consigliate per te</h2></div>
       <div class="sezione">
         <ul>
           <li v-for="(film,index) in serieTv" :key="index" >
@@ -26,7 +26,6 @@
 </template>
 
 <script>
-
 import Card from './Card.vue'
 export default {
     name:"Films",
@@ -39,9 +38,6 @@ export default {
         searchFilm:""
       }
     },
-    methods:{
-      
-}
 }
 </script>
 
@@ -54,23 +50,27 @@ export default {
   height:100%;
   padding-top:70px;
   
+  .title{
+    margin:20px;
+  }
   .rowMovie, .rowSerie{
-    width:90%;
+    width:96%;
     margin:auto;
     padding-top:20px;
+    display: flex;
     
     .sezione{
       display:flex;
       justify-items: space-between;
+      
       ul{
       display:flex;
       flex-wrap:wrap;
       li{
-        margin:20px  ;
+        margin:20px 14px ;
       }
+     }
     }
-    }
-    
   }
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <div class="card" :style="{ backgroundImage: 'url(https://image.tmdb.org/t/p/w300'+film.poster_path+')'}" >
+  <div class="card"  :style="{ backgroundImage: 'url(https://image.tmdb.org/t/p/w300'+film.poster_path+')'}" >
+    <!-- <div  class="card"  :style="{ backgroundImage: 'url(https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80)'}" > -->
       <div class="infoFilm">
         <h3>{{film.title || film.name}}</h3>
         <h4>{{film.original_title || film.original_name}}</h4>
@@ -36,8 +37,8 @@ export default {
 <style lang="scss" scope>
 @import '../assets/style/variables';
   .card{
-    width:180px;
-    height:240px;
+    width:210px;
+    height:270px;
     background-color:$secondaryColor;
     text-align: center;
     border-radius:3px;
