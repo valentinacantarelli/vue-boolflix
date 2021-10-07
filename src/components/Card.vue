@@ -4,7 +4,10 @@
         <h3>{{film.title || film.name}}</h3>
         <h4>{{film.original_title || film.original_name}}</h4>
         <lang-flag :iso="film.original_language" :squared="false" />
-        <div v-for="(stelle,indice) in votoInStelle" :key="indice" class="votazione"><i class="fas fa-star"></i></div>
+        <div  class="votazione">
+          <i class="fas fa-star" v-for="(stelle,indice) in votoInStelle" :key="indice"></i>
+          <i class="far fa-star" v-for="(stelle,indice) in 5 - votoInStelle" :key="indice"></i>
+        </div>
         
       </div>
   </div>
@@ -49,9 +52,8 @@ export default {
       width:100%;
       top:0;
       left:0;
-      padding:22px 3px;
+      padding:22px 6px;
       opacity:0;
-      
 
       &:hover  {
         background-color: rgba(29, 29, 29, 0.863);
@@ -72,6 +74,8 @@ export default {
     .votazione{
       display:inline-block;
       color: goldenrod;
+      padding:10px;
+      font-size:17px;
     }
     .flag-icon{
       display:block;
