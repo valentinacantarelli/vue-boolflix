@@ -6,13 +6,11 @@
       <span>Serie Tv</span>
       <span>Film</span>
     </div>
-    
     <div>
       <input type="text" placeholder="cosa vuoi guardare oggi?" v-model="inputText" @keyup.enter="$emit('search', inputText)">
       <button @click="$emit('search', inputText)" class="btn">Cerca</button>
     </div>
   </header>
-  
 </template>
 
 <script>
@@ -72,6 +70,5 @@ header{
     cursor: pointer;
     
   }
-
 }
 </style>

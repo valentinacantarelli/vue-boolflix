@@ -1,5 +1,7 @@
 <template>
-  <div class="card"  :style="{ backgroundImage: 'url(https://image.tmdb.org/t/p/w300'+film.poster_path+')'}" >
+  <div class="card"  >
+      <img class="card" v-if="film.poster_path != null" :src="'https://image.tmdb.org/t/p/w300' + film.poster_path" alt="">
+      <img class="card altro" v-else src="https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fG1vdmllfGVufDB8MXwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
       <div class="infoFilm">
         <h3>{{film.title || film.name}}</h3>
         <h4>{{film.original_title || film.original_name}}</h4>
@@ -8,7 +10,6 @@
           <i class="fas fa-star" v-for="(stelle,indice) in votoInStelle" :key="indice"></i>
           <i class="far fa-star" v-for="(stelle,indice) in 5 - votoInStelle" :key="indice"></i>
         </div>
-        
       </div>
   </div>
 </template>
@@ -18,10 +19,6 @@ import LangFlag from 'vue-lang-code-flags'
 export default {
     name:"Card",
     props:["film"],
-    data(){
-      return{
-      }
-    },
     components:{
       LangFlag
     },
@@ -84,7 +81,6 @@ export default {
       display:block;
       margin:0 auto;
       padding:14px;
-      
     }
   }
 </style>

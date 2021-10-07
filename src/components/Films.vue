@@ -18,9 +18,7 @@
             <Card :film="film"/>  
           </li>
       </ul>
-      </div>
-      
-      
+      </div>      
     </div>
   </div>
 </template>
